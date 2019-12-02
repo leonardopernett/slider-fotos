@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <img name="slider" width="300">
+
+    <script> 
+       window.addEventListener('load', ()=>{
+           var contador = 0;
+           let imagen = []
+               imagen[0] = './image/1.jpg'
+               imagen[1] = './image/2.jpg'
+               imagen[2] = './image/3.jpg'
+          
+          function cambiar(){
+            window.slider.src = imagen[contador];
+            if(contador < 2){
+                contador ++
+              }else{
+                contador = 0; 
+              }
+            }
+       setInterval(cambiar,1000)
+       })
+
+    </script>
+</body>
+</html>
